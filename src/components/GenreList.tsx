@@ -16,7 +16,7 @@ interface Props {
 
 const GenreList = ({ onSelected, selectedGenre }: Props) => {
   const { data, isLoading, error } = useGeneres();
-  const skeletons = [1, 2, 3, 4, 5, 6];
+  const skeletons = [1, 2, 3, 4, 5, 6, 7, 8];
   //if (isLoading) return <Spinner />;
   if (error) return null;
   return (
@@ -24,7 +24,6 @@ const GenreList = ({ onSelected, selectedGenre }: Props) => {
       {isLoading &&
         skeletons.map((s) => (
           <ListItem>
-            {" "}
             <GenreSkeleton key={s} />
           </ListItem>
         ))}
